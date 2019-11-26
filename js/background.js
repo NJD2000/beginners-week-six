@@ -17,8 +17,15 @@ $( document ).ready(function(){
     var randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
     // this creates a string that css will understand to be a background url
     var imageUrl = "url('./images/" + randomBackground + ".jpg')"
-    
-    
+
+    $( "background" ).click(function() {
+      $("div").animate({
+          left: '250px',
+          opacity: '0.5',
+          height: '150px',
+          width: '150px'
+        })
+});
     // 2. using jquery, change the image url of the body background to the new one saved above
 
     // EXTENSION TASK!
@@ -26,6 +33,6 @@ $( document ).ready(function(){
     //   (hint, you should re-use randomBackgroun)
     // Double points if you replace '-' between their names with a space
 
-    
-  }) 
+
+  })
 }) // here endeth the function
